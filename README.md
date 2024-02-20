@@ -11,8 +11,11 @@ def index():
 @app.route("/main",methods=["GET","POST"])
 
 def main():
-r = request.form.get("name")
+global r,first_time
+if first_time=1;
+r = request.form.get("r")
+first_time=0
 return(render_template("main.html",r=r))
-
-if __name__=="__main__":
-  app.run()      
+@app.route("/image_gpt",methods=["GET","POST"])
+def image_gpt()
+return(render_template("image_gpt.html"))
